@@ -165,6 +165,96 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Game filtering functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const gameCards = document.querySelectorAll('.game-card[data-category]');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            gameCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Game search functionality
+const gameSearch = document.getElementById('game-search');
+if (gameSearch) {
+    gameSearch.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        gameCards.forEach(card => {
+            const gameTitle = card.querySelector('.game-title').textContent.toLowerCase();
+            const gameGenre = card.querySelector('.game-genre').textContent.toLowerCase();
+            
+            if (gameTitle.includes(searchTerm) || gameGenre.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+}
+
+// News category filtering
+const categoryButtons = document.querySelectorAll('.category-btn');
+const newsCards = document.querySelectorAll('.news-card[data-category]');
+
+if (categoryButtons.length > 0) {
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-category');
+            
+            newsCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// FAQ functionality
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQ items
+        faqItems.forEach(faqItem => {
+            faqItem.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
@@ -173,39 +263,60 @@ if (contactForm) {
         
         // Get form data
         const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
+        const firstName = formData.get('firstName');
+        const lastName = formData.get('lastName');
+        const email = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
         
         // Simple validation
-        if (!name || !email || !message) {
-            showNotification('Please fill in all fields', 'error');
+        if (!firstName || !lastName || !email || !subject || !message) {
+            showNotification('Please fill in all required fields', 'error');
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            showNotification('Please enter a valid email address', 'error');
             return;
         }
         
         // Simulate form submission
-        showNotification('Message sent successfully!', 'success');
+        showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
         this.reset();
     });
 }
 
 // Newsletter form handling
-const newsletterForm = document.querySelector('.newsletter');
-if (newsletterForm) {
-    const newsletterBtn = newsletterForm.querySelector('.btn');
-    const newsletterInput = newsletterForm.querySelector('input');
+const newsletterForms = document.querySelectorAll('.newsletter, .newsletter-form');
+newsletterForms.forEach(form => {
+    const submitBtn = form.querySelector('.btn, button');
+    const emailInput = form.querySelector('input[type="email"]');
     
-    newsletterBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const email = newsletterInput.value;
-        
-        if (!email || !isValidEmail(email)) {
-            showNotification('Please enter a valid email address', 'error');
-            return;
-        }
-        
-        showNotification('Successfully subscribed to newsletter!', 'success');
-        newsletterInput.value = '';
+    if (submitBtn && emailInput) {
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = emailInput.value;
+            
+            if (!email || !isValidEmail(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            showNotification('Successfully subscribed to newsletter!', 'success');
+            emailInput.value = '';
+        });
+    }
+});
+
+// Load more functionality
+const loadMoreBtn = document.getElementById('load-more-btn');
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+        showNotification('Loading more articles...', 'info');
+        // Simulate loading delay
+        setTimeout(() => {
+            showNotification('No more articles to load', 'info');
+        }, 1000);
     });
 }
 
@@ -295,11 +406,18 @@ window.addEventListener('load', () => {
 });
 
 // Game card click handlers
-document.querySelectorAll('.game-card .btn-outline').forEach(button => {
+document.querySelectorAll('.game-card .btn-outline, .game-card .btn-primary').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const gameTitle = this.closest('.game-card').querySelector('.game-title').textContent;
-        showNotification(`More info about ${gameTitle} coming soon!`, 'info');
+        
+        if (this.textContent.includes('Add to Cart') || this.textContent.includes('Play Now')) {
+            showNotification(`${gameTitle} added to your library!`, 'success');
+        } else if (this.textContent.includes('Wishlist')) {
+            showNotification(`${gameTitle} added to wishlist!`, 'info');
+        } else {
+            showNotification(`More info about ${gameTitle} coming soon!`, 'info');
+        }
     });
 });
 
@@ -313,22 +431,11 @@ document.querySelectorAll('.play-btn').forEach(button => {
 });
 
 // News card click handlers
-document.querySelectorAll('.news-card .btn-outline').forEach(button => {
+document.querySelectorAll('.news-card .btn-outline, .featured-article .btn-primary').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
-        const newsTitle = this.closest('.news-card').querySelector('.news-title').textContent;
+        const newsTitle = this.closest('.news-card, .featured-article').querySelector('.news-title, .article-title').textContent;
         showNotification(`Full article: "${newsTitle}" coming soon!`, 'info');
-    });
-});
-
-// Hero button handlers
-document.querySelectorAll('.hero-buttons .btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        if (this.textContent.includes('Explore Games')) {
-            document.getElementById('games').scrollIntoView({ behavior: 'smooth' });
-        } else if (this.textContent.includes('Latest News')) {
-            document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
-        }
     });
 });
 
