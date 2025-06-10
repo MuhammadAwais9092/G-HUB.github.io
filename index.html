@@ -1,139 +1,447 @@
-<!-- HTML document declaration -->
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Head section with metadata and title -->
 <head>
-  <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure viewport for responsiveness -->
-  <title>G-HUB</title> <!-- Page title -->
-  
-  <!-- Link to external CSS files for styling -->
-  <link rel="stylesheet" href="design.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Your Ultimate Gaming Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<!-- Body of the HTML document -->
 <body>
-
-  <!-- Header section -->
-  <header>
-    <!-- Brand link leading to the home page -->
-    <a href="index.html" class="header-brand">G-HUB</a>
-    <!-- Navigation menu -->
-    <nav>
-      <ul>
-        <!-- Navigation links -->
-        <li><a href="Games.html">Games</a></li>
-        <li><a href="Popular.html">Popular</a></li>
-        <li><a href="Reviews.html">Review</a></li>
-      </ul>
-      <!-- Additional link in the navigation menu -->
-      <a href="About.html" class="header-about">About</a>
-      </a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Game<span class="accent">Hub</span></h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#games" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </nav>
-  </header>
 
-  <!-- Main content section -->
-  <main>
-    <!-- Section for the index banner -->
-    <section class="index-banner">
-      <!-- Container for vertical centering -->
-      <div class="vertical-center">
-        <!-- Headings in the banner -->
-        <h2>The Right Game <br> For You</h2>
-        <h1>Look for the right game using this website, it is all about the reviews.</h1>
-      </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Welcome to the <span class="accent">Future</span> of Gaming
+                </h1>
+                <p class="hero-subtitle">
+                    Discover the latest games, reviews, and gaming news all in one place
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Explore Games
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-newspaper"></i>
+                        Latest News
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
-    <!-- Another wrapper for the index links section -->
-    <div class="wrapper">
-      <!-- Section for index links -->
-      <section class="index-links">
-        
-        <!-- Links to different pages with corresponding box links and headings -->
-        <a href="Games.html" class="Games">
-          <div class="index-boxlink-square-1">
-            <h3>Games</h3>
-          </div>
-        </a>
-        
-        <a href="Popular.html">
-          <div class="index-boxlink-rectangle-1">
-            <h3>Popular</h3>
-          </div>
-        </a>
+    <!-- Featured Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Games</h2>
+                <p class="section-subtitle">Discover the hottest games trending right now</p>
+            </div>
+            <div class="games-grid">
+                <div class="game-card" data-aos="fade-up">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cyberpunk Adventure">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Cyberpunk Adventure</h3>
+                        <p class="game-genre">Action RPG</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.5/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
 
-        <a href="Reviews.html">
-          <div class="index-boxlink-square-2">
-            <h3>Reviews</h3>
-          </div>
-        </a>
+                <div class="game-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Space Odyssey">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Space Odyssey</h3>
+                        <p class="game-genre">Sci-Fi Strategy</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
 
-        <a href="About.html">
-          <div class="index-boxlink-rectangle-2">
-            <h3>About</h3>
-          </div>
-        </a>
+                <div class="game-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fantasy Quest">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Fantasy Quest</h3>
+                        <p class="game-genre">Fantasy Adventure</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.0/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
 
-        <a href="#">
-          <div class="index-boxlink-square-3">
-            <h3>Youtube</h3>
-          </div>
-        </a>
+                <div class="game-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Racing Thunder">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Racing Thunder</h3>
+                        <p class="game-genre">Racing Simulation</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.3/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
 
-        <a href="#">
-          <div class="index-boxlink-square-4">
-            <h3>Contact</h3>
-          </div>
-        </a>
-      </section>
-    </div>
-  </main>
+                <div class="game-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Battle Royale">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Battle Royale</h3>
+                        <p class="game-genre">Multiplayer Shooter</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
 
-  <!-- Another wrapper for the footer section -->
-  <div class="wrapper"> 
-    <!-- Footer section -->
-    <footer>
-      <!-- Main footer links -->
-      <ul class="footer-links-main">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+                <div class="game-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Puzzle Master">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Puzzle Master</h3>
+                        <p class="game-genre">Puzzle Strategy</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.2/5</span>
+                        </div>
+                        <button class="btn btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Details section in the footer -->
-      <ul class="footer-links-details">
-        <li><a><p>Details</p></a></li>
-        <li><a href="#">0*********</a></li>
-        <li><a href="#">m**@gmail.com</a></li>
-        <li><a href="#">G-HUB.com</a></li>
-      </ul>
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Gaming News</h2>
+                <p class="section-subtitle">Stay updated with the gaming world</p>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured" data-aos="fade-right">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gaming News">
+                        <div class="news-category">Featured</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">The Future of Gaming: VR and Beyond</h3>
+                        <p class="news-excerpt">Explore how virtual reality and emerging technologies are reshaping the gaming landscape...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 15, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                GameHub Team
+                            </span>
+                        </div>
+                        <button class="btn btn-outline">Read More</button>
+                    </div>
+                </article>
 
-      <!-- Latest Games section in the footer -->
-      <ul class="footer-links-cases">
-        <li><a><p>latest Games</p></a></li>
-        <li><a href="#">Tencent&nbsp;-&nbsp;Path of Exile</a></li>
-        <li><a href="#">Sony&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Rise of the Rōnin</a></li>
-        <li><a href="#">EA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;The SIMS4</a></li>
-        <li><a href="#">Sony&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;TEKKEN 8</a></li>
-      </ul>
+                <div class="news-sidebar">
+                    <article class="news-card small" data-aos="fade-left" data-aos-delay="100">
+                        <div class="news-image">
+                            <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Gaming Update">
+                        </div>
+                        <div class="news-content">
+                            <h4 class="news-title">New Game Releases This Month</h4>
+                            <p class="news-excerpt">Check out the most anticipated games launching...</p>
+                            <span class="news-date">Dec 12, 2024</span>
+                        </div>
+                    </article>
 
-      <!-- Social media icons in the footer -->
-      <div class="footer-sm">
-        <a href="#">
-          <img src="images/youtube.png" alt="youtube logo">
-        </a>
-        <a>
-          <img src="images/facebook.png" alt="facebook logo">
-        </a>
-        <a>
-          <img src="images/insta.png" alt="instagram logo">
-        </a>
-      </div>
+                    <article class="news-card small" data-aos="fade-left" data-aos-delay="200">
+                        <div class="news-image">
+                            <img src="https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Gaming Tips">
+                        </div>
+                        <div class="news-content">
+                            <h4 class="news-title">Pro Gaming Tips & Tricks</h4>
+                            <p class="news-excerpt">Level up your gameplay with these expert strategies...</p>
+                            <span class="news-date">Dec 10, 2024</span>
+                        </div>
+                    </article>
+
+                    <article class="news-card small" data-aos="fade-left" data-aos-delay="300">
+                        <div class="news-image">
+                            <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Gaming Hardware">
+                        </div>
+                        <div class="news-content">
+                            <h4 class="news-title">Best Gaming Hardware 2024</h4>
+                            <p class="news-excerpt">Our comprehensive review of this year's top gaming gear...</p>
+                            <span class="news-date">Dec 8, 2024</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Features Section -->
+    <section class="future-features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Coming Soon</h2>
+                <p class="section-subtitle">Exciting features in development</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>User Accounts</h3>
+                    <p>Create your gaming profile and track your favorite games</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game API Integration</h3>
+                    <p>Real-time game data and statistics from major gaming platforms</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Features</h3>
+                    <p>Connect with fellow gamers and share your experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions or suggestions? We'd love to hear from you!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hello@gamehub.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Gaming District, Tech City</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Game<span class="accent">Hub</span></h3>
+                    <p>Your ultimate destination for gaming news, reviews, and community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Action Games</a></li>
+                        <li><a href="#">RPG Games</a></li>
+                        <li><a href="#">Strategy Games</a></li>
+                        <li><a href="#">Indie Games</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest gaming updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GameHub. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-  </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
