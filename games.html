@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - GameHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Game<span class="accent">Hub</span></h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="games.html" class="nav-link active">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Game Library</h1>
+            <p class="page-subtitle">Discover amazing games across all genres</p>
+        </div>
+    </section>
+
+    <!-- Game Filters -->
+    <section class="game-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+                <button class="filter-btn" data-filter="racing">Racing</button>
+                <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search games..." id="game-search">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Grid -->
+    <section class="games-section">
+        <div class="container">
+            <div class="games-grid" id="games-grid">
+                <!-- Action Games -->
+                <div class="game-card" data-category="action" data-aos="fade-up">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cyberpunk Adventure">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$59.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Cyberpunk Adventure</h3>
+                        <p class="game-genre">Action RPG</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.5/5</span>
+                        </div>
+                        <p class="game-description">Immerse yourself in a futuristic world filled with cybernetic enhancements and corporate espionage.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="strategy" data-aos="fade-up" data-aos-delay="100">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Space Odyssey">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$49.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Space Odyssey</h3>
+                        <p class="game-genre">Sci-Fi Strategy</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0/5</span>
+                        </div>
+                        <p class="game-description">Command your fleet across the galaxy in this epic space strategy game with stunning visuals.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="rpg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fantasy Quest">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$39.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Fantasy Quest</h3>
+                        <p class="game-genre">Fantasy Adventure</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.0/5</span>
+                        </div>
+                        <p class="game-description">Embark on an epic journey through magical realms filled with mythical creatures and ancient secrets.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="racing" data-aos="fade-up" data-aos-delay="300">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Racing Thunder">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$29.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Racing Thunder</h3>
+                        <p class="game-genre">Racing Simulation</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.3/5</span>
+                        </div>
+                        <p class="game-description">Experience the thrill of high-speed racing with realistic physics and stunning track designs.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="action" data-aos="fade-up" data-aos-delay="400">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Battle Royale">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">Free</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Battle Royale</h3>
+                        <p class="game-genre">Multiplayer Shooter</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.8/5</span>
+                        </div>
+                        <p class="game-description">Drop into intense multiplayer battles where only the strongest survive in this free-to-play shooter.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Play Now</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="puzzle" data-aos="fade-up" data-aos-delay="500">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Puzzle Master">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$19.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Puzzle Master</h3>
+                        <p class="game-genre">Puzzle Strategy</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.2/5</span>
+                        </div>
+                        <p class="game-description">Challenge your mind with intricate puzzles and brain-teasing challenges in this addictive game.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Games -->
+                <div class="game-card" data-category="rpg" data-aos="fade-up" data-aos-delay="600">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Dragon's Legacy">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$54.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Dragon's Legacy</h3>
+                        <p class="game-genre">Fantasy RPG</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.6/5</span>
+                        </div>
+                        <p class="game-description">Forge your destiny as a dragon rider in this epic fantasy RPG with breathtaking landscapes.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="strategy" data-aos="fade-up" data-aos-delay="700">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Empire Builder">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$44.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Empire Builder</h3>
+                        <p class="game-genre">City Building Strategy</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.1/5</span>
+                        </div>
+                        <p class="game-description">Build and manage your own civilization from the ground up in this comprehensive strategy game.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="action" data-aos="fade-up" data-aos-delay="800">
+                    <div class="game-image">
+                        <img src="https://images.pexels.com/photos/1666316/pexels-photo-1666316.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Neon Warrior">
+                        <div class="game-overlay">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="game-price">$34.99</div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Neon Warrior</h3>
+                        <p class="game-genre">Cyberpunk Action</p>
+                        <div class="game-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.4/5</span>
+                        </div>
+                        <p class="game-description">Fight through neon-lit streets in this fast-paced cyberpunk action game with stunning visuals.</p>
+                        <div class="game-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn btn-outline">Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Game<span class="accent">Hub</span></h3>
+                    <p>Your ultimate destination for gaming news, reviews, and community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="games.html">Action Games</a></li>
+                        <li><a href="games.html">RPG Games</a></li>
+                        <li><a href="games.html">Strategy Games</a></li>
+                        <li><a href="games.html">Indie Games</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest gaming updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GameHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

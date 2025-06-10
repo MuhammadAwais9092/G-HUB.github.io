@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - GameHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Game<span class="accent">Hub</span></h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="games.html" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link active">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Gaming News</h1>
+            <p class="page-subtitle">Stay updated with the latest gaming industry news and trends</p>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="featured-news">
+        <div class="container">
+            <article class="featured-article" data-aos="fade-up">
+                <div class="article-image">
+                    <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Featured News">
+                    <div class="article-category">Breaking News</div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">The Future of Gaming: VR and Beyond</h2>
+                    <div class="article-meta">
+                        <span class="article-date">
+                            <i class="fas fa-calendar"></i>
+                            December 15, 2024
+                        </span>
+                        <span class="article-author">
+                            <i class="fas fa-user"></i>
+                            GameHub Team
+                        </span>
+                        <span class="article-read-time">
+                            <i class="fas fa-clock"></i>
+                            5 min read
+                        </span>
+                    </div>
+                    <p class="article-excerpt">
+                        Virtual reality technology is revolutionizing the gaming industry like never before. From immersive storytelling to unprecedented interactivity, VR is opening new frontiers for game developers and players alike. In this comprehensive analysis, we explore the current state of VR gaming, emerging technologies, and what the future holds for this exciting medium.
+                    </p>
+                    <button class="btn btn-primary">Read Full Article</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-categories">
+                <button class="category-btn active" data-category="all">All News</button>
+                <button class="category-btn" data-category="reviews">Reviews</button>
+                <button class="category-btn" data-category="updates">Game Updates</button>
+                <button class="category-btn" data-category="industry">Industry</button>
+                <button class="category-btn" data-category="esports">Esports</button>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card" data-category="reviews" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Game Review">
+                        <div class="news-category">Review</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Space Odyssey: A Stellar Strategy Experience</h3>
+                        <p class="news-excerpt">Our in-depth review of the latest space strategy game that's taking the gaming world by storm. Discover what makes this title stand out...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 14, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Alex Chen
+                            </span>
+                        </div>
+                        <div class="news-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>9.5/10</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="updates" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Game Update">
+                        <div class="news-category">Update</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Fantasy Quest Receives Major Content Update</h3>
+                        <p class="news-excerpt">The beloved RPG gets new dungeons, character classes, and quality of life improvements in its biggest update yet...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 13, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Sarah Johnson
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="industry" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/194511/pexels-photo-194511.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Industry News">
+                        <div class="news-category">Industry</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Gaming Industry Reaches Record Revenue in 2024</h3>
+                        <p class="news-excerpt">Market analysis shows unprecedented growth in the gaming sector, driven by mobile gaming and subscription services...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 12, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Mike Rodriguez
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="esports" data-aos="fade-up" data-aos-delay="300">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Esports News">
+                        <div class="news-category">Esports</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">World Championship Finals Draw Record Viewership</h3>
+                        <p class="news-excerpt">The Battle Royale World Championship breaks streaming records with over 50 million concurrent viewers worldwide...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 11, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Emma Davis
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="reviews" data-aos="fade-up" data-aos-delay="400">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Puzzle Game Review">
+                        <div class="news-category">Review</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Puzzle Master: Mind-Bending Challenges Await</h3>
+                        <p class="news-excerpt">This innovative puzzle game combines traditional mechanics with modern design to create something truly special...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 10, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                David Kim
+                            </span>
+                        </div>
+                        <div class="news-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>8.2/10</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="industry" data-aos="fade-up" data-aos-delay="500">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gaming Technology">
+                        <div class="news-category">Technology</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Next-Gen Graphics Cards Promise 8K Gaming</h3>
+                        <p class="news-excerpt">Major hardware manufacturers unveil their latest GPU lineup, promising unprecedented performance for 8K gaming...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 9, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Lisa Wang
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="updates" data-aos="fade-up" data-aos-delay="600">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Game Update">
+                        <div class="news-category">Update</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Empire Builder Adds Multiplayer Co-op Mode</h3>
+                        <p class="news-excerpt">The popular city-building game introduces cooperative multiplayer, allowing friends to build civilizations together...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 8, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Tom Wilson
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="esports" data-aos="fade-up" data-aos-delay="700">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/1666316/pexels-photo-1666316.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Esports Tournament">
+                        <div class="news-category">Esports</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">New Esports League Announces $10M Prize Pool</h3>
+                        <p class="news-excerpt">The newly formed Global Gaming League promises the largest prize pool in competitive gaming history...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 7, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Rachel Green
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="reviews" data-aos="fade-up" data-aos-delay="800">
+                    <div class="news-image">
+                        <img src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Indie Game Review">
+                        <div class="news-category">Indie Spotlight</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hidden Gem: Indie Developer's Breakthrough Hit</h3>
+                        <p class="news-excerpt">A small indie studio creates waves with their innovative approach to storytelling and gameplay mechanics...</p>
+                        <div class="news-meta">
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                Dec 6, 2024
+                            </span>
+                            <span class="news-author">
+                                <i class="fas fa-user"></i>
+                                Chris Taylor
+                            </span>
+                        </div>
+                        <div class="news-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>8.7/10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline" id="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Get the latest gaming news delivered straight to your inbox</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button class="btn btn-primary">Subscribe Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Game<span class="accent">Hub</span></h3>
+                    <p>Your ultimate destination for gaming news, reviews, and community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="games.html">Action Games</a></li>
+                        <li><a href="games.html">RPG Games</a></li>
+                        <li><a href="games.html">Strategy Games</a></li>
+                        <li><a href="games.html">Indie Games</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for the latest gaming updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GameHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
